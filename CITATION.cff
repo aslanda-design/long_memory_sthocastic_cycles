@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "cyclical-fractional-test"
+version: "0.1.0"
+date-released: "2026-07-08"
+authors:
+  - family-names: "Landa"
+    given-names: "Asier"
+repository-code: "https://github.com/aslanda-design/log_memory_cycles"
+license: "MIT"
+keywords:
+  - "time series"
+  - "fractional integration"
+  - "cyclical long memory"
+  - "periodogram"

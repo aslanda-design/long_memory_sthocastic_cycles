@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cyclical-fractional-test"
+version = "0.1.0"
+description = "Statistical test for fractional cyclic long memory in time series"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Asier Landa" },
+]
+keywords = [
+    "time-series",
+    "long-memory",
+    "fractional-integration",
+    "periodogram",
+    "chebyshev-polynomials",
+    "statistics",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Typing :: Typed",
+]
+dependencies = [
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2",
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "twine>=5.1",
+]
+docs = [
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
+]
+notebooks = [
+    "jupyterlab>=4.0",
+    "matplotlib>=3.8",
+    "pandas>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/aslanda-design/log_memory_cycles"
+Repository = "https://github.com/aslanda-design/log_memory_cycles"
+Issues = "https://github.com/aslanda-design/log_memory_cycles/issues"
+Documentation = "https://github.com/aslanda-design/log_memory_cycles/tree/main/docs"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+cyclical_fractional_test = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["cyclical_fractional_test"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

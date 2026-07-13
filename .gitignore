@@ -1,0 +1,101 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editors and local workspace settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.python-version
+
+# AI-assistant and local working notes.
+# These are useful privately, but should not be part of the clean public TFM repo.
+/CLAUDE.md
+/AGENTS.md
+/.claude/
+/.codex/
+/.cursor/
+
+# Python bytecode and extension modules
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging and build artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Test, coverage, linting, and type-check caches
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+.hypothesis/
+
+# Documentation sources/builds that are not needed for the clean TFM repository.
+/docs/
+/mkdocs.yml
+/site/
+
+# Jupyter transient files and scratch notebooks.
+# Curated notebooks live under notebooks/ and are intentionally kept.
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+/*.ipynb
+/practice_notebooks/
+
+# Data policy for the public repo:
+# - keep only small, directly used public datasets;
+# - keep large/private/intermediate datasets out of normal Git.
+/data/*
+!/data/
+!/data/.gitkeep
+!/data/README*
+!/data/MONTHLY.csv
+
+# Generated research artifacts and model caches.
+/data/gridsearch_runs/
+/models/
+/outputs/
+/artifacts/
+/figures/
+
+# Serialized arrays/models are reproducible outputs, not source.
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.parquet
+*.feather
+
+# Keep CI, but do not accidentally publish release automation with stale secrets/settings.
+/.github/workflows/publish.yml
+
+# Logs
+*.log
